@@ -1,8 +1,154 @@
-.div {
-  height: 100px;
-  width: 100px;
-  border: 1px solid red;
-  background: black;
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block .custom-shape-divider-bottom-1649516478 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.white-block .custom-shape-divider-bottom-1649516478 svg {
+  position: relative;
+  display: block;
+  width: calc(263% + 1.3px);
+  height: 80px;
+  transform: rotateY(180deg);
+}
+.white-block .custom-shape-divider-bottom-1649516478 .shape-fill {
+  fill: #fff;
+}
+
+.btn-special-animation {
+  position: relative;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+.btn-special-animation::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-special-animation:hover::before {
+  transform: scaleX(1.2);
+  transform-origin: left;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 200;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+.burger-btn:hover .burger-btn__bars::after, .burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  content: " ";
+  right: 0;
+  background-color: #fff;
+  position: absolute;
+  height: 3px;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+  transition-delay: 0.2s;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 75vh;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(45deg, rgba(56, 238, 56, 0.49), rgba(14, 82, 5, 0.75)), url("../img/alpaca-home-img-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-attachment: scroll;
+}
+.header__heading {
+  font-family: "Rubik Bubbles", cursive;
+  font-size: 6rem;
+  text-shadow: 5px 5px 10px #2e2e2e;
+  font-weight: lighter;
+}
+.header__text {
+  font-size: 1rem;
+}
+.header__btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  background: #fff;
+  color: #2e2e2e;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header__btn:hover {
+  transform: scale(1.2);
+}
+.header__btn::before {
+  background-color: #e3ffe3;
 }
 
 /*# sourceMappingURL=main.css.map */

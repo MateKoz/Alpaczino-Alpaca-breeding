@@ -1,9 +1,127 @@
-$main-color: black;
+@import "variables";
+@import "mixins";
+@import "components";
+@import "colors";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+//hamburger icon///////////////////////////////////////
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 200;
 
 
-.div {
-  height: 100px;
-  width: 100px;
-  border: 1px solid red;
-  background: $main-color;
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 6px;
+  }
+
+  &:hover {
+    .burger-btn__bars::after, .burger-btn__bars::before {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+
+  &__bars, &__bars::after, &__bars::before {
+    content: ' ';
+    right: 0;
+    background-color: $pure-white;
+    position: absolute;
+    height: 3px;
+    transition: width .3s;
+
+  }
+
+  &__bars {
+    width: 100%;
+
+    &::after {
+      top: 13px;
+      width: 60%;
+    }
+
+    &::before {
+      top: 27px;
+      width: 30%;
+      transition-delay: .2s;
+    }
+  }
+
+}
+
+//HEADER /////////
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 75vh;
+  text-align: center;
+  color: $pure-white;
+  @include hero-images("../img/alpaca-home-img-small.jpg");
+  background-attachment: scroll;
+
+  &__heading {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 6rem;
+    text-shadow: 5px 5px 10px #2e2e2e;
+    font-weight: lighter;
+  }
+
+  &__text {
+    font-size: 1rem;
+
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+    background: $pure-white;
+    color: $dark;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+
+    }
+
+    &::before {
+      background-color: $green-light-button;
+    }
+  }
 }
