@@ -3,6 +3,7 @@
 @import "components";
 @import "colors";
 
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -202,34 +203,42 @@ body {
   .header__heading {
     font-size: 10rem;
   }
+
 }
 
 @media (min-width: 768px) {
   .header__heading {
     font-size: 8rem;
   }
+
   .header__text {
     font-size: 1.5rem;
   }
+
   .header__btn {
     font-size: 1.4rem;
   }
+
   .white-block .custom-shape-divider-bottom-1649516478 svg {
     height: 150px;
   }
+
 }
 
 @media (max-width: 450px) {
   .header {
     @include hero-images("../img/alpaca-home-img-small.jpg");
   }
+
 }
 
 @media (max-width: 400px) {
   .header__heading {
     font-size: 4.5rem;
   }
+
   .header__text {
     font-size: 1rem;
   }
+
 }
