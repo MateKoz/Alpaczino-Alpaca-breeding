@@ -19,6 +19,68 @@ body {
 
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: $green-gradient-solid;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: 0.5s;
+
+  .nav__circle {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid #0e5205;
+    border-radius: 50%;
+    background-image: url('../img/nav-alpaca-face.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: .3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $pure-white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    text-align: center;
+
+    &::before {
+      transition: .4s;
+      position: absolute;
+      transform: scaleX(0);
+      bottom: 3px;
+      left: 36.5%;
+      content: "";
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $pure-white;
+    }
+
+    &:hover::before {
+      transform: scaleX(1.2);
+    }
+  }
+}
+
 //hamburger icon///////////////////////////////////////
 
 .burger-btn {
@@ -77,6 +139,8 @@ body {
 
 }
 
+//hamburger icon end///////////////////////////////////////
+
 //HEADER /////////
 .header {
   position: relative;
@@ -105,8 +169,8 @@ body {
 
   &__btn {
     margin-top: 2rem;
-    padding: 0.8rem 1.6rem;
-    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
     background: $pure-white;
     color: $dark;
     border-radius: 0.5rem;
@@ -123,5 +187,44 @@ body {
     &::before {
       background-color: $green-light-button;
     }
+  }
+}
+
+//media query
+
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: $green-gradient url("../img/alpaca-home-img.jpg");
+  }
+  .header__heading {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__heading {
+    font-size: 8rem;
+  }
+  .header__text {
+    font-size: 1.5rem;
+  }
+  .header__btn {
+    font-size: 1.4rem;
+  }
+  .white-block .custom-shape-divider-bottom-1649516478 svg {
+    height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__heading {
+    font-size: 4.5rem;
+  }
+  .header__text {
+    font-size: 1rem;
   }
 }

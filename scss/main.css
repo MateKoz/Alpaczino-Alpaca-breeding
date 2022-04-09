@@ -6,7 +6,7 @@
 
 .white-block .custom-shape-divider-bottom-1649516478 {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -21,7 +21,7 @@
   transform: rotateY(180deg);
 }
 .white-block .custom-shape-divider-bottom-1649516478 .shape-fill {
-  fill: #fff;
+  fill: rgb(255, 255, 255);
 }
 
 .btn-special-animation {
@@ -63,6 +63,62 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(45deg, rgb(67, 121, 67), rgb(51, 210, 88));
+  z-index: 100;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.nav .nav__circle {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border: 2px solid #0e5205;
+  border-radius: 50%;
+  background-image: url("../img/nav-alpaca-face.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+}
+.nav .nav__circle:hover {
+  transform: scale(1.2);
+}
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  text-align: center;
+}
+.nav__item::before {
+  transition: 0.4s;
+  position: absolute;
+  transform: scaleX(0);
+  bottom: 3px;
+  left: 36.5%;
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  background-color: rgb(255, 255, 255);
+}
+.nav__item:hover::before {
+  transform: scaleX(1.2);
+}
+
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -89,7 +145,7 @@ body {
 .burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
   content: " ";
   right: 0;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   height: 3px;
   transition: width 0.3s;
@@ -116,7 +172,7 @@ body {
   padding: 2em;
   height: 75vh;
   text-align: center;
-  color: #fff;
+  color: rgb(255, 255, 255);
   background-image: linear-gradient(45deg, rgba(56, 238, 56, 0.49), rgba(14, 82, 5, 0.75)), url("../img/alpaca-home-img-small.jpg");
   background-size: cover;
   background-position: center;
@@ -134,9 +190,9 @@ body {
 }
 .header__btn {
   margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.4rem;
-  background: #fff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  background: rgb(255, 255, 255);
   color: #2e2e2e;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -149,6 +205,47 @@ body {
 }
 .header__btn::before {
   background-color: #e3ffe3;
+}
+
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+
+  .header {
+    background-image: linear-gradient(45deg, rgba(56, 238, 56, 0.49), rgba(14, 82, 5, 0.75)) url("../img/alpaca-home-img.jpg");
+  }
+
+  .header__heading {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__heading {
+    font-size: 8rem;
+  }
+
+  .header__text {
+    font-size: 1.5rem;
+  }
+
+  .header__btn {
+    font-size: 1.4rem;
+  }
+
+  .white-block .custom-shape-divider-bottom-1649516478 svg {
+    height: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .header__heading {
+    font-size: 4.5rem;
+  }
+
+  .header__text {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

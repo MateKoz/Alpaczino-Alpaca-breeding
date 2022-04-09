@@ -1,7 +1,7 @@
 @import "colors";
 
 @mixin hero-images($bgImg) {
-  background-image: $blue-gradient, url($bgImg);
+  background-image: $green-gradient, url($bgImg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
