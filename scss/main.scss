@@ -19,123 +19,123 @@ body {
   font-family: 'Montserrat', sans-serif;
 
 
-.nav {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-image: $green-gradient-solid;
-  z-index: 100;
-  transform: translateX(100%);
-  transition: 0.5s;
+  .nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: $green-gradient-solid;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: 0.5s;
 
-  &__items--circle {
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    border: 2px solid #0e5205;
-    border-radius: 50%;
-    background-image: url('../img/nav-alpaca-face.jpg');
-    background-position: center;
-    background-size: cover;
-    transition: .3s;
+    &__items--circle {
+      position: relative;
+      width: 15rem;
+      height: 15rem;
+      border: 2px solid #0e5205;
+      border-radius: 50%;
+      background-image: url('../img/nav-alpaca-face.jpg');
+      background-position: center;
+      background-size: cover;
+      transition: .3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    &__item {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: $pure-white-opacity;
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin: 0.5em 0;
+      padding: 0.5em;
+      text-align: center;
+
+      &::before {
+        transition: .4s;
+        position: absolute;
+        transform: scaleX(0);
+        bottom: 3px;
+        left: 36.5%;
+        content: "";
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $pure-white;
+      }
+
+      &:hover::before {
+        transform: scaleX(1.2);
+      }
+    }
+  }
+
+  //hamburger icon///////////////////////////////////////
+
+  .burger-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1em;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    z-index: 200;
+
+
+    &:focus {
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, .5);
+      border-radius: 6px;
+    }
 
     &:hover {
-      transform: scale(1.2);
+      .burger-btn__bars::after, .burger-btn__bars::before {
+        width: 100%;
+      }
     }
-  }
 
-  &--active {
-    transform: translateX(0);
-  }
+    &__box {
+      position: relative;
+      width: 40px;
+      height: 30px;
+    }
 
-  &__item {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: $pure-white-opacity;
-    text-transform: uppercase;
-    font-size: 2rem;
-    margin: 0.5em 0;
-    padding: 0.5em;
-    text-align: center;
-
-    &::before {
-      transition: .4s;
-      position: absolute;
-      transform: scaleX(0);
-      bottom: 3px;
-      left: 36.5%;
-      content: "";
-      width: 4rem;
-      height: 0.2rem;
+    &__bars, &__bars::after, &__bars::before {
+      content: ' ';
+      right: 0;
       background-color: $pure-white;
+      position: absolute;
+      height: 3px;
+      transition: width .3s;
+
     }
 
-    &:hover::before {
-      transform: scaleX(1.2);
-    }
-  }
-}
-
-//hamburger icon///////////////////////////////////////
-
-.burger-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 1em;
-  background: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  z-index: 200;
-
-
-  &:focus {
-    outline: none;
-    border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 6px;
-  }
-
-  &:hover {
-    .burger-btn__bars::after, .burger-btn__bars::before {
+    &__bars {
       width: 100%;
+
+      &::after {
+        top: 13px;
+        width: 60%;
+      }
+
+      &::before {
+        top: 27px;
+        width: 30%;
+        transition-delay: .2s;
+      }
     }
-  }
-
-  &__box {
-    position: relative;
-    width: 40px;
-    height: 30px;
-  }
-
-  &__bars, &__bars::after, &__bars::before {
-    content: ' ';
-    right: 0;
-    background-color: $pure-white;
-    position: absolute;
-    height: 3px;
-    transition: width .3s;
-
-  }
-
-  &__bars {
-    width: 100%;
-
-    &::after {
-      top: 13px;
-      width: 60%;
-    }
-
-    &::before {
-      top: 27px;
-      width: 30%;
-      transition-delay: .2s;
-    }
-  }
 
     &__img {
       margin-bottom: 0;
@@ -144,6 +144,7 @@ body {
     }
   }
 }
+
 
 //hamburger icon end///////////////////////////////////////
 
