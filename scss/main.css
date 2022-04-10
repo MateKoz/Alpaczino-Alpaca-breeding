@@ -318,7 +318,6 @@ body .burger-btn__img {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-attachment: scroll;
 }
 .header__heading {
   font-family: "Rubik Bubbles", cursive;

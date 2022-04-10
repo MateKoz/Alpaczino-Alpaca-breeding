@@ -187,7 +187,6 @@ body {
   text-align: center;
   color: $pure-white;
   @include hero-images("../img/alpaca-home-img.jpg");
-  background-attachment: scroll;
 
   &__heading {
     font-family: 'Rubik Bubbles', cursive;
