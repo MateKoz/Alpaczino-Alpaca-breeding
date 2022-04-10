@@ -1,7 +1,7 @@
-@import "variables";
-@import "mixins";
-@import "components";
-@import "colors";
+@import "_variables";
+@import "_mixins";
+@import "_components";
+@import "_colors";
 
 
 *, *::before, *::after {
@@ -33,7 +33,7 @@ body {
   transform: translateX(100%);
   transition: 0.5s;
 
-  .nav__circle {
+  &__items--circle {
     position: relative;
     width: 15rem;
     height: 15rem;
@@ -49,7 +49,6 @@ body {
     }
   }
 
-
   &--active {
     transform: translateX(0);
   }
@@ -58,7 +57,7 @@ body {
     position: relative;
     display: block;
     text-decoration: none;
-    color: $pure-white;
+    color: $pure-white-opacity;
     text-transform: uppercase;
     font-size: 2rem;
     margin: 0.5em 0;
@@ -171,7 +170,7 @@ body {
 
   &__btn {
     margin-top: 2rem;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.6rem;
     font-size: 1.2rem;
     background: $pure-white;
     color: $dark;
@@ -192,6 +191,37 @@ body {
   }
 }
 
+//main
+//ours attraction
+
+.dreams {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px 5px #4d4646;
+    border-radius: 5px;
+  }
+
+  &__title {
+    margin-bottom: .5em;
+    text-transform: uppercase;
+    color: $main-color;
+    font-weight: normal;
+    font-size: 3rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+}
+
+
 //media query
 
 @media (min-width: 992px) {
@@ -203,42 +233,120 @@ body {
   .header__heading {
     font-size: 10rem;
   }
+  .nav {
+    &__items--circle {
+      width: 25rem;
+      height: 25rem;
+    }
 
+    &__item {
+      font-size: 4rem;
+
+      &::before {
+        left: 36%;
+        width: 7rem;
+      }
+    }
+  }
+  .dreams {
+    &__box {
+      &-text {
+        display: flex;
+        flex-direction: column;
+
+      }
+    }
+  }
+  .dreams__title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .dreams__title {
+    font-size: 2rem;
+  }
+  .section-heading::before {
+    width: 35rem;
+  }
 }
 
 @media (min-width: 768px) {
   .header__heading {
     font-size: 8rem;
   }
-
   .header__text {
     font-size: 1.5rem;
   }
-
   .header__btn {
     font-size: 1.4rem;
   }
-
   .white-block .custom-shape-divider-bottom-1649516478 svg {
     height: 150px;
   }
+  .dreams {
+    font-size: 1.8rem;
 
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-text {
+        width: 55%;
+
+        &--right {
+          text-align: right;
+        }
+      }
+
+      &-img {
+        width: 40%;
+
+        &--right {
+          order: 1;
+        }
+      }
+    }
+
+    &__img {
+      margin-bottom: 0;
+      border-radius: 5px;
+      max-height: 300px;
+    }
+  }
 }
 
-@media (max-width: 450px) {
+
+@media(max-width: 768px) {
+  .dreams__box {
+    margin-bottom: 5rem;
+  }
+  .dreams__title {
+    font-size: 3rem;
+  }
+  .section-heading::before {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 568px) {
   .header {
     @include hero-images("../img/alpaca-home-img-small.jpg");
   }
-
 }
 
 @media (max-width: 400px) {
   .header__heading {
     font-size: 4.5rem;
   }
-
   .header__text {
     font-size: 1rem;
   }
-
 }
+
+@media (max-width: 336px) {
+  .section-heading::before {
+    width: 0;
+  }
+}
+

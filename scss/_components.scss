@@ -1,4 +1,4 @@
-@import "colors";
+@import "_colors";
 
 .wrapper {
   margin: 0 auto;
@@ -21,7 +21,7 @@
     position: relative;
     display: block;
     width: calc(263% + 1.3px);
-    height: 80px;
+    height: 50px;
     transform: rotateY(180deg);
   }
 
@@ -46,7 +46,7 @@
     height: 100%;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .3s;
+    transition: transform .5s;
     z-index: -1;
   }
 
@@ -54,4 +54,44 @@
     transform: scaleX(1.2);
     transform-origin: left;
   }
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: $main-color;
+  letter-spacing: 2px;
+}
+
+.section-heading::before {
+  content: '';
+  position: absolute;
+  width: 50rem;
+  height: 1px;
+  background-color: $main-color;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.section-padding {
+  padding: 3em 2em;
+}
+
+@media(min-width: 768px) {
+  .section-heading {
+    font-size: 3.6rem;
+  }
+
+}
+
+@media(min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+
 }

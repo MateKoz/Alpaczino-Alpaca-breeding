@@ -17,7 +17,7 @@
   position: relative;
   display: block;
   width: calc(263% + 1.3px);
-  height: 80px;
+  height: 50px;
   transform: rotateY(180deg);
 }
 .white-block .custom-shape-divider-bottom-1649516478 .shape-fill {
@@ -40,7 +40,7 @@
   height: 100%;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   z-index: -1;
 }
 .btn-special-animation:hover::before {
@@ -48,6 +48,42 @@
   transform-origin: left;
 }
 
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: #19750b;
+  letter-spacing: 2px;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  width: 50rem;
+  height: 1px;
+  background-color: #19750b;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.section-padding {
+  padding: 3em 2em;
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -76,7 +112,7 @@ body {
   transform: translateX(100%);
   transition: 0.5s;
 }
-.nav .nav__circle {
+.nav__items--circle {
   position: relative;
   width: 15rem;
   height: 15rem;
@@ -87,7 +123,7 @@ body {
   background-size: cover;
   transition: 0.3s;
 }
-.nav .nav__circle:hover {
+.nav__items--circle:hover {
   transform: scale(1.2);
 }
 .nav--active {
@@ -97,7 +133,7 @@ body {
   position: relative;
   display: block;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
   font-size: 2rem;
   margin: 0.5em 0;
@@ -190,7 +226,7 @@ body {
 }
 .header__btn {
   margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.6rem;
   font-size: 1.2rem;
   background: rgb(255, 255, 255);
   color: #2e2e2e;
@@ -207,6 +243,28 @@ body {
   background-color: #e3ffe3;
 }
 
+.dreams__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.dreams__img {
+  width: 100%;
+  margin-bottom: 1em;
+  box-shadow: 5px 5px 5px #4d4646;
+  border-radius: 5px;
+}
+.dreams__title {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  color: #19750b;
+  font-weight: normal;
+  font-size: 3rem;
+}
+.dreams__text {
+  font-size: 1.4rem;
+}
+
 @media (min-width: 992px) {
   .burger-btn {
     top: 50px;
@@ -215,6 +273,36 @@ body {
 
   .header__heading {
     font-size: 10rem;
+  }
+
+  .nav__items--circle {
+    width: 25rem;
+    height: 25rem;
+  }
+  .nav__item {
+    font-size: 4rem;
+  }
+  .nav__item::before {
+    left: 36%;
+    width: 7rem;
+  }
+
+  .dreams__box-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dreams__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 992px) {
+  .dreams__title {
+    font-size: 2rem;
+  }
+
+  .section-heading::before {
+    width: 35rem;
   }
 }
 @media (min-width: 768px) {
@@ -233,8 +321,46 @@ body {
   .white-block .custom-shape-divider-bottom-1649516478 svg {
     height: 150px;
   }
+
+  .dreams {
+    font-size: 1.8rem;
+  }
+  .dreams__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dreams__box-text {
+    width: 55%;
+  }
+  .dreams__box-text--right {
+    text-align: right;
+  }
+  .dreams__box-img {
+    width: 40%;
+  }
+  .dreams__box-img--right {
+    order: 1;
+  }
+  .dreams__img {
+    margin-bottom: 0;
+    border-radius: 5px;
+    max-height: 300px;
+  }
 }
-@media (max-width: 450px) {
+@media (max-width: 768px) {
+  .dreams__box {
+    margin-bottom: 5rem;
+  }
+
+  .dreams__title {
+    font-size: 3rem;
+  }
+
+  .section-heading::before {
+    width: 30rem;
+  }
+}
+@media (max-width: 568px) {
   .header {
     background-image: linear-gradient(45deg, rgba(56, 238, 56, 0.49), rgba(14, 82, 5, 0.75)), url("../img/alpaca-home-img-small.jpg");
     background-size: cover;
@@ -249,6 +375,11 @@ body {
 
   .header__text {
     font-size: 1rem;
+  }
+}
+@media (max-width: 336px) {
+  .section-heading::before {
+    width: 0;
   }
 }
 

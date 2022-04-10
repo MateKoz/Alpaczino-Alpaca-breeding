@@ -1,4 +1,4 @@
-@import "colors";
+@import "_colors";
 
 @mixin hero-images($bgImg) {
   background-image: $green-gradient, url($bgImg);
