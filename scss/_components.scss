@@ -95,3 +95,43 @@
   }
 
 }
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: $main-color;
+  letter-spacing: 2px;
+}
+
+.section-heading::before {
+  content: '';
+  position: absolute;
+  width: 50rem;
+  height: 1px;
+  background-color: $main-color;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.section-padding {
+  padding: 3em 2em;
+}
+
+@media(min-width: 768px) {
+  .section-heading {
+    font-size: 3.6rem;
+  }
+
+}
+
+@media(min-width: 992px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+
+}
