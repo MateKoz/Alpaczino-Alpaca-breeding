@@ -21,7 +21,6 @@
     position: relative;
     display: block;
     width: calc(263% + 1.3px);
-    height: 50px;
     transform: rotateY(180deg);
   }
 
@@ -80,6 +79,51 @@
 
 .section-padding {
   padding: 3em 2em;
+}
+
+.custom-shape-divider-top-1649600539 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1649600539 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 55px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1649600539 .shape-fill {
+  fill: #FFFFFF;
+}
+
+//bottom wrapper
+
+
+.custom-shape-divider-bottom-1649601805 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649601805 svg {
+  position: relative;
+  display: block;
+  width: calc(110% + 1.3px);
+  height: 55px;
+}
+
+.custom-shape-divider-bottom-1649601805 .shape-fill {
+  fill: #FFFFFF;
 }
 
 @media(min-width: 768px) {

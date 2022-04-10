@@ -34,8 +34,11 @@ body {
 
     &__items--circle {
       position: relative;
+      left: 50%;
+      transform: translateX(-50%);
       width: 15rem;
       height: 15rem;
+      margin-bottom: 10rem;
       border: 2px solid #0e5205;
       border-radius: 50%;
       background-image: url('../img/nav-alpaca-face.jpg');
@@ -68,8 +71,8 @@ body {
         position: absolute;
         transform: scaleX(0);
         bottom: 3px;
-        left: 36.5%;
         content: "";
+        left: 40%;
         width: 4rem;
         height: 0.2rem;
         background-color: $pure-white;
@@ -200,7 +203,7 @@ body {
 //main
 //ours attraction
 
-.dreams {
+.attractions {
   &__box {
     display: flex;
     flex-direction: column;
@@ -228,33 +231,42 @@ body {
 }
 
 
-//media query
+//section hero img
+
+
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  @include hero-images("../img/alpaca-home-img.jpg");
+  text-align: center;
+  color: $pure-white;
+
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    padding: 1em 0;
+
+  }
+}
+
+//media query /////////////////////////////////////////////////////
 
 @media (min-width: 992px) {
   .burger-btn {
     top: 50px;
     right: 50px;
+    font-weight: lighter;
   }
 
   .header__heading {
     font-size: 10rem;
   }
-  .nav {
-    &__items--circle {
-      width: 25rem;
-      height: 25rem;
-    }
 
-    &__item {
-      font-size: 4rem;
-
-      &::before {
-        left: 36%;
-        width: 7rem;
-      }
-    }
-  }
-  .dreams {
+  .attractions {
     &__box {
       &-text {
         display: flex;
@@ -263,13 +275,13 @@ body {
       }
     }
   }
-  .dreams__title {
+  .attractions__title {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 992px) {
-  .dreams__title {
+  .attractions__title {
     font-size: 2rem;
   }
   .section-heading::before {
@@ -290,7 +302,7 @@ body {
   .white-block .custom-shape-divider-bottom-1649516478 svg {
     height: 150px;
   }
-  .dreams {
+  .attractions {
     font-size: 1.8rem;
 
     &__box {
@@ -320,24 +332,62 @@ body {
       max-height: 300px;
     }
   }
+  .hero-img {
+    padding: 15rem 2em;
+
+    .hero-img__title {
+      font-size: 5rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+    }
+
+    hr {
+      margin: 0 auto;
+      width: 50%;
+    }
+  }
 }
 
 
 @media(max-width: 768px) {
-  .dreams__box {
+  .attractions__box {
     margin-bottom: 5rem;
   }
-  .dreams__title {
+  .attractions__title {
     font-size: 3rem;
   }
   .section-heading::before {
     width: 30rem;
   }
+  .hero-img__title {
+    font-size: 3rem;
+  }
+
 }
 
 @media (max-width: 568px) {
   .header {
     @include hero-images("../img/alpaca-home-img-small.jpg");
+  }
+  .hero-img {
+    @include hero-images("../img/alpaca-home-img-small.jpg");
+
+    hr {
+      width: 70%;
+      margin: 0 auto;
+
+    }
+  }
+  .hero-img__title {
+    font-size: 2.5rem;
+  }
+  .custom-shape-divider-bottom-1649601805 svg {
+    height: 30px;
+  }
+  .custom-shape-divider-top-1649600539 svg {
+    height: 30px;
   }
 }
 
@@ -355,4 +405,6 @@ body {
     width: 0;
   }
 }
+
+
 
