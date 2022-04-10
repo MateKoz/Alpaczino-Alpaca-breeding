@@ -194,16 +194,38 @@ body .nav__items--circle {
   transform: translateX(-50%);
   width: 15rem;
   height: 15rem;
-  margin-bottom: 10rem;
   border: 2px solid #0e5205;
   border-radius: 50%;
   background-image: url("../img/nav-alpaca-face.jpg");
   background-position: center;
   background-size: cover;
-  transition: 0.3s;
+  margin-bottom: 5rem;
 }
-body .nav__items--circle:hover {
-  transform: scale(1.2);
+body .nav__items--circle .circle-title {
+  position: relative;
+  font-family: "Rubik Bubbles", cursive;
+  font-size: 6rem;
+  text-shadow: 5px 5px 10px #2e2e2e;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  right: 50%;
+  transform: translateX(-8%);
+  top: 70%;
+}
+body .nav .nav__items {
+  margin-top: 10rem;
+}
+body .nav .nav__item--circle-title {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  font-family: "Rubik Bubbles", cursive;
+  color: rgb(255, 255, 255);
+  font-size: 5rem;
+  font-weight: lighter;
+  text-shadow: 4px 3px 2px #2e2e2e;
 }
 body .nav--active {
   transform: translateX(0);
