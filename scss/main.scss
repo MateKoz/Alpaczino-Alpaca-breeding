@@ -95,7 +95,7 @@ body {
         transform: scaleX(0);
         bottom: 3px;
         content: "";
-        left: 40%;
+        left: 39%;
         width: 4rem;
         height: 0.2rem;
         background-color: $pure-white;
@@ -273,6 +273,10 @@ body {
 }
 
 //ours alpacas ////////////////////////////////////////////////////
+.alpacas {
+  margin-bottom: 3rem;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -319,7 +323,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1545588249-25bfc2e63125?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80");
 }
 
-button {
+.card__button-info {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -368,6 +372,75 @@ p {
   font-size: 14px;
 }
 
+
+//offers
+
+.offers {
+  position: relative;
+  @include hero-images('../img/offer-background.jpg');
+
+  &__option {
+    margin: 1em 0;
+    box-shadow: 5px 5px 10px #2e2e2e;
+    overflow: hidden;
+    background-color: $pure-white;
+    border-radius: 0.8rem;
+
+    &-img {
+      width: 100%;
+      transition: transform .3s;
+
+
+      &:hover {
+        transform: scale(1.2)
+      }
+    }
+
+    &-info {
+      padding: 2em;
+      background-color: $pure-white;
+      z-index: 10;
+      width: 100%;
+    }
+
+    &-head {
+      margin-bottom: .5em;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    &-text {
+      margin-bottom: 0.5em;
+      font-size: 1.3em;
+      color: $dark
+    }
+
+    &-btn {
+      margin-top: 1em;
+      padding: .8em;
+      color: $pure-white;
+      background-color: $main-color;
+      border: none;
+      border-radius: 6px;
+      width: 20rem;
+      cursor: pointer;
+
+      &::before {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+}
+
+.offer-title {
+  color: $pure-white
+}
+
+.section-heading {
+  margin-top: 4rem;
+}
+
 //media query /////////////////////////////////////////////////////
 
 @media (min-width: 992px) {
@@ -397,6 +470,19 @@ p {
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
+  .offers {
+     &__option {
+       &-img {
+         object-fit: cover;
+         height: 300px;
+       }
+       &-text {
+         font-size: 1.5rem;
+       }
+     }
+  }
+
 }
 
 @media (max-width: 992px) {
@@ -477,7 +563,6 @@ p {
   }
 }
 
-
 @media(max-width: 768px) {
   .attractions__box {
     margin-bottom: 5rem;
@@ -527,6 +612,35 @@ p {
       height: 40rem;
       width: 30rem;
     }
+  }
+}
+
+@media(min-width: 768px) {
+  .offers {
+    &__option {
+      display: flex;
+      margin: 2em 0;
+      width: 100%;
+      &-img {
+        width: 50%;
+        height: auto;
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem;
+
+      }
+
+      &-head {
+        margin-bottom: 0.5em;
+        font-size: 3.6rem;
+      }
+    }
+  }
+  .offers__option-img--right {
+    order: 1;
   }
 }
 

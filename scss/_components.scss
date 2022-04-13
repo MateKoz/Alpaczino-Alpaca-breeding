@@ -106,7 +106,7 @@
 
 .custom-shape-divider-bottom-1649601805 {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -159,8 +159,41 @@
   bottom: 0;
 }
 
+.offer-title::before {
+  content: '';
+  position: absolute;
+  width: 50rem;
+  height: 1px;
+  background-color: $pure-white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
 .section-padding {
   padding: 3em 2em;
+}
+
+//offer wave
+
+.custom-shape-divider-top-1649867026 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1649867026 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 62px;
+}
+
+.custom-shape-divider-top-1649867026 .shape-fill {
+  fill: #FFFFFF;
 }
 
 @media(min-width: 768px) {
