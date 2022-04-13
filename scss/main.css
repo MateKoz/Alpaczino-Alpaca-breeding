@@ -202,6 +202,28 @@
   fill: #FFFFFF;
 }
 
+.custom-shape-divider-bottom-1649888855 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649888855 svg {
+  position: relative;
+  display: block;
+  width: calc(181% + 1.3px);
+  height: 75px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1649888855 .shape-fill {
+  fill: #FFFFFF;
+}
+
 .custom-shape-divider-bottom-1649880451 {
   position: absolute;
   bottom: 0;
@@ -707,6 +729,9 @@ p {
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+}
+.contact__form {
+  margin-bottom: 10rem;
 }
 .contact__form, .contact__form-top {
   display: flex;

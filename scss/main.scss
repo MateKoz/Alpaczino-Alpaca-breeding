@@ -509,6 +509,10 @@ p {
   @include hero-images('../img/offer-background.jpg');
   overflow: hidden;
 
+  &__form {
+    margin-bottom: 10rem;
+  }
+
   &__form, &__form-top {
     display: flex;
     flex-direction: column;
