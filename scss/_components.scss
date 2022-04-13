@@ -196,6 +196,95 @@
   fill: #FFFFFF;
 }
 
+.custom-shape-divider-top-1649886887 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1649886887 svg {
+  position: relative;
+  display: block;
+  width: calc(153% + 1.3px);
+  height: 67px;
+}
+
+.custom-shape-divider-top-1649886887 .shape-fill {
+  fill: #FFFFFF;
+}
+
+//opinion wave
+
+.custom-shape-divider-bottom-1649880451 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649880451 svg {
+  position: relative;
+  display: block;
+  width: calc(133% + 1.3px);
+  height: 93px;
+}
+
+.custom-shape-divider-bottom-1649880451 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1649880985 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1649880985 svg {
+  position: relative;
+  display: block;
+  width: calc(157% + 1.3px);
+  height: 53px;
+}
+
+.custom-shape-divider-bottom-1649880985 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.down-waves {
+  margin-top: 5rem;
+}
+
+.custom-shape-divider-top-1649884931 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1649884931 svg {
+  position: relative;
+  display: block;
+  width: calc(162% + 1.3px);
+  height: 54px;
+}
+
+.custom-shape-divider-top-1649884931 .shape-fill {
+  fill: #FFFFFF;
+}
+
+
 @media(min-width: 768px) {
   .section-heading {
     font-size: 3.6rem;

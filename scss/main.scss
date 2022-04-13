@@ -107,12 +107,14 @@ body {
     }
   }
 
-  //hamburger icon///////////////////////////////////////
+  //==========================================
+  //hamburger icon start
+  //==========================================
 
   .burger-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     padding: 1em;
     background: none;
     border: 1px solid transparent;
@@ -122,7 +124,7 @@ body {
     &:focus {
       outline: none;
       border: 1px solid rgba(255, 255, 255, .5);
-      border-radius: 6px;
+      border-radius: 3px;
     }
 
     &:hover {
@@ -169,9 +171,13 @@ body {
   }
 }
 
-//hamburger icon end///////////////////////////////////////
+//==========================================
+//hamburger icon ends
+//==========================================
 
-//HEADER /////////
+//==========================================
+//header
+//==========================================
 .header {
   position: relative;
   display: flex;
@@ -219,7 +225,9 @@ body {
 }
 
 //main
-//ours attraction
+//==========================================
+//our attraction
+//==========================================
 
 .attractions {
   padding: 0 2em;
@@ -251,7 +259,9 @@ body {
 }
 
 
+//==========================================
 //section hero img
+//==========================================
 
 
 .hero-img {
@@ -272,7 +282,10 @@ body {
   }
 }
 
-//ours alpacas ////////////////////////////////////////////////////
+//==========================================
+//our alpacas
+//==========================================
+
 .alpacas {
   margin-bottom: 3rem;
 }
@@ -372,8 +385,9 @@ p {
   font-size: 14px;
 }
 
-
+//==========================================
 //offers
+//==========================================
 
 .offers {
   position: relative;
@@ -430,7 +444,6 @@ p {
       }
     }
   }
-
 }
 
 .offer-title {
@@ -441,7 +454,166 @@ p {
   margin-top: 4rem;
 }
 
-//media query /////////////////////////////////////////////////////
+//==========================================
+//reviews
+//==========================================
+
+.opinion {
+  &__box {
+    position: relative;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px #2e2e2e;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 15%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__box-quote {
+    margin-bottom: 1em;
+    font-size: 3rem;
+    color: $main-color;
+  }
+
+  &__box-text {
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+    color: $dark;
+  }
+}
+
+
+//=========================================
+//contact
+//=========================================
+
+.contact {
+  position: relative;
+  @include hero-images('../img/offer-background.jpg');
+  overflow: hidden;
+
+  &__form, &__form-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-label {
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    color: $pure-white;
+    font-size: 1.5rem;
+  }
+
+  &__form-input {
+    @include contactForm;
+  }
+
+  &__form-textarea {
+    @include contactForm;
+    max-width: 100%;
+    width: 100%;
+    min-height: 170px;
+  }
+
+  &__form-btn {
+    align-self: flex-end;
+    padding: 1em;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    color: $main-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &::before {
+      background-color: $green-light-button;
+    }
+  }
+}
+
+//=========================================
+//FOOTER
+//=========================================
+
+.footer {
+  color: $dark;
+  background-color: $pure-white;
+
+
+  .wrapper {
+    padding: 6em 2em 2em;
+
+  }
+
+  &__box {
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__box-desktop {
+    display: none;
+  }
+
+  &__box-title {
+    margin-bottom: 1em;
+    font-size: 2rem;
+  }
+
+  &__box-social {
+    margin: 2em 0 1em;
+
+  }
+
+  &__box-link {
+    padding: 0.3em;
+    color: $dark;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: color .3s;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__bottom-text {
+    padding: 2em;
+    text-align: center;
+  }
+}
+
+//==========================================
+//media query
+//==========================================
+
 
 @media (min-width: 992px) {
   .burger-btn {
@@ -449,6 +621,7 @@ p {
     right: 50px;
     font-weight: lighter;
   }
+
 
   .header__heading {
     font-size: 10rem;
@@ -472,23 +645,24 @@ p {
   }
 
   .offers {
-     &__option {
-       &-img {
-         object-fit: cover;
-         height: 300px;
-       }
-       &-text {
-         font-size: 1.5rem;
-       }
-     }
-  }
+    &__option {
+      &-img {
+        object-fit: cover;
+        height: 300px;
+      }
 
+      &-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 992px) {
   .attractions__title {
     font-size: 2rem;
   }
+
   .section-heading::before {
     width: 35rem;
   }
@@ -498,15 +672,19 @@ p {
   .header__heading {
     font-size: 8rem;
   }
+
   .header__text {
     font-size: 1.5rem;
   }
+
   .header__btn {
     font-size: 1.4rem;
   }
+
   .white-block .custom-shape-divider-bottom-1649516478 svg {
     height: 150px;
   }
+
   .attractions {
     font-size: 1.8rem;
 
@@ -559,6 +737,45 @@ p {
     .card {
       height: 50rem;
       width: 35rem;
+    }
+  }
+
+  .footer {
+
+    &__boxes {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__box-desktop {
+      display: block;
+
+    }
+
+    &__box {
+      margin: 0 2em;
+      width: 25%;
+
+      &:first-child {
+        width: 50%;
+      }
+    }
+
+    &__box-title {
+      font-size: 2.4rem;
+    }
+
+    &__box-list {
+      list-style: none;
+    }
+
+    &__box-list-item {
+      margin-bottom: 1em;
+
+      a {
+        color: $dark;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -621,16 +838,17 @@ p {
       display: flex;
       margin: 2em 0;
       width: 100%;
+
       &-img {
         width: 50%;
         height: auto;
       }
+
       &-info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 5rem;
-
       }
 
       &-head {
@@ -639,6 +857,7 @@ p {
       }
     }
   }
+
   .offers__option-img--right {
     order: 1;
   }
