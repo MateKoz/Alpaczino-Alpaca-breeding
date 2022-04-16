@@ -19,12 +19,13 @@ const burgerColor = () => {
     let scrollSection = window.scrollY;
 
     allSections.forEach(section => {
-        if (section.classList.contains('white') && section.offsetTop <= scrollSection + 60) {
-            navBars.classList.add('black-bars-color')
-        } else if (!section.classList.contains('white') && section.offsetTop <= scrollSection + 60) {
-            navBars.classList.remove('black-bars-color')
+            if (section.classList.contains('white') && section.offsetTop <= scrollSection + 60) {
+                navBars.classList.add('black-bars-color')
+            } else if (!section.classList.contains('white') && section.offsetTop <= scrollSection + 60) {
+                navBars.classList.remove('black-bars-color')
+            }
         }
-    })
+    )
 }
 
 const showYear = () => {

@@ -142,10 +142,15 @@ body {
     &__bars, &__bars::after, &__bars::before {
       content: ' ';
       right: 0;
-      background-color: $pure-white;
+      background-color: white;
       position: absolute;
       height: 3px;
       transition: width .3s;
+    }
+    .black-bars-color,
+    .black-bars-color::after,
+    .black-bars-color::before {
+      background-color: $dark;
     }
 
     &__bars {
@@ -615,12 +620,6 @@ p {
   }
 }
 
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-  background-color: black;
-}
-
 //==========================================
 //media query
 //==========================================
@@ -898,5 +897,3 @@ p {
     width: 0;
   }
 }
-
-

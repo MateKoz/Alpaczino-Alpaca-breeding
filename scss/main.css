@@ -420,10 +420,15 @@ body .burger-btn__box {
 body .burger-btn__bars, body .burger-btn__bars::after, body .burger-btn__bars::before {
   content: " ";
   right: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   position: absolute;
   height: 3px;
   transition: width 0.3s;
+}
+body .burger-btn .black-bars-color,
+body .burger-btn .black-bars-color::after,
+body .burger-btn .black-bars-color::before {
+  background-color: #2e2e2e;
 }
 body .burger-btn__bars {
   width: 100%;
@@ -817,12 +822,6 @@ p {
 .footer__bottom-text {
   padding: 2em;
   text-align: center;
-}
-
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-  background-color: black;
 }
 
 @media (min-width: 992px) {
